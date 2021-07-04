@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #d3fbd8ec;
+  background-color: #171a21;
+  font-family: "Lora", serif;
+  padding: 1.5rem;
+}
+
+@media (min-width: 40rem) {
+  body {
+    padding: 2rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.social-links {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links i {
+  margin: 0.8rem 0;
+}
+
+.social-links i:hover {
+  color: #f8bd3b;
+}
+
+.social-links::before {
+  content: "";
+  width: 2px;
+  height: 5rem;
+  background-color: #f8bd3b;
+}
+
+.social-links::after {
+  content: "";
+  width: 2px;
+  height: 5rem;
+  background-color: #f8bd3b;
+}
+
+@media (min-width: 40rem) {
+  .social-links {
+    display: flex;
+  }
+}
+
+.header .overlay-div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.9;
+  display: none;
+  transform: translateX(100%);
+  transition: transform 350ms ease-in-out 200ms;
+  background-color: #131515;
+  z-index: 999;
+}
+
+.header .overlay-div.show-nav {
+  display: block;
+  transform: translateX(0);
+}
+
+.header .overlay-div ul {
+  float: right;
+  background-color: #232f45;
+  height: 100%;
+  width: 70%;
+  color: #f4f9ff;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 4rem;
+}
+
+.header .overlay-div ul button {
+  padding: 0.5rem 3rem;
+  font-size: inherit;
+  color: #f8bd3b;
+  background: transparent;
+  border-radius: 2.5rem;
+  border: 1px solid #f8bd3b;
+  margin-top: 1rem;
+}
+
+.header .overlay-div ul li {
+  margin-top: 1rem;
+  padding: 0.8rem 1.3rem;
+}
+
+.header .overlay-div ul li > a:hover {
+  color: #63ecbb;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__name {
+  color: #63ecbb;
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+}
+
+.header__name span {
+  text-transform: capitalize;
+  font-size: 2.3rem;
+}
+
+.header__toggle {
+  height: 100%;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+.header__toggle.animate > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__toggle.animate > span:first-child {
+  transform: rotate(45deg);
+  width: 27px;
+}
+
+.header__toggle.animate > span:last-child {
+  transform: rotate(-45deg);
+}
+
+.header__toggle > span {
+  position: relative;
+  display: block;
+  background-color: #f8bd3b;
+  width: 22px;
+  height: 3px;
+  transition: all 350ms ease-in-out;
+  transform-origin: -1px 2px;
+}
+
+.header__toggle > span:first-child {
+  width: 17px;
+  height: 3px;
+  margin-bottom: 8px;
+}
+
+.header__toggle > span:last-child {
+  width: 27px;
+  height: 3px;
+  margin-top: 8px;
+}
+
+@media (min-width: 40rem) {
+  .header__toggle {
+    display: none;
+  }
+}
+
+.header__list {
+  display: none;
+}
+
+.header__list ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__list ul > li {
+  border-bottom: 2px solid #f8bd3b;
+}
+
+.header__list ul > li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.header__list ul > li > a {
+  line-height: 3;
+}
+
+.header__list ul > li > a:hover {
+  color: #f8bd3b;
+}
+
+@media (min-width: 40rem) {
+  .header__list {
+    display: block;
+  }
+}
+
+@keyframes navbar {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+.hero__sec__text > span {
+  color: #f8bd3b;
+}
+
+.hero__sec__text > h1 {
+  font-size: clamp(2rem, calc(4vw + 1rem), 4rem);
+  font-weight: 400;
+  color: #63ecbb;
+  margin: 0.4rem 0rem;
+}
+
+.hero__sec__text > h3 {
+  margin: 0.4rem 0;
+  color: #f4f9ff;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-size: 1.5em;
+}
+
+.hero__sec__image {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.hero__sec__image img {
+  width: 100%;
+}
+
+.hero__sec__image .image {
+  margin: 2rem;
+  position: relative;
+}
+
+.hero__sec__image .image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #f8bd3b;
+  top: 20px;
+  left: 20px;
+  z-index: -10;
+}
+/*# sourceMappingURL=style.css.map */
