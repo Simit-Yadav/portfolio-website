@@ -15,4 +15,18 @@
       }
     }
   }
+
+  .about_image {
+    .image {
+      display: block;
+
+      @include breakpoint-up(medium) {
+        display: none;
+      }
+    }
+
+    @include breakpoint-up(medium) {
+      display: none;
+    }
+  }
 }
