@@ -51,8 +51,46 @@ p {
   word-spacing: 2px;
 }
 
-section {
+footer {
   margin-top: 2rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  color: #f8bd3b;
+}
+
+footer .end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+footer .end p {
+  margin: 0 1rem;
+}
+
+footer .end > div {
+  width: 30%;
+  background-color: #f8bd3b;
+  border: 0.5px solid #f8bd3b;
+}
+
+footer .social-links-bottom {
+  color: #63ecbb;
+  display: flex;
+  margin: 1.5rem 0;
+  justify-content: space-around;
+}
+
+@media (min-width: 40rem) {
+  footer .social-links-bottom {
+    display: none;
+  }
+}
+
+section {
+  margin-top: 2.5rem;
+  text-align: center;
 }
 
 section .header {
@@ -63,13 +101,9 @@ section .header {
 
 section .header > h1 {
   margin-bottom: 0.5rem;
-  color: #f4f9ff;
   text-transform: capitalize;
   word-spacing: 2px;
   letter-spacing: 1px;
-}
-
-section .header > h1 > span {
   color: #63ecbb;
 }
 
@@ -330,8 +364,8 @@ section .header > h1 > span {
   width: 100%;
   height: 100%;
   border: 2px solid #f8bd3b;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   z-index: -10;
 }
 
@@ -436,11 +470,98 @@ section .header > h1 > span {
   }
 }
 
-.projects__contaner {
-  width: 100%;
+.projects__container .project {
+  background-color: #232f45;
+  padding: 1.5rem;
+  margin: 0.7rem 0;
+  text-align: left;
 }
 
-.projects__contaner .project {
-  width: 20%;
+.projects__container .project__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f8bd3b;
+  margin-bottom: 0.7rem;
+}
+
+.projects__container .project__title {
+  font-size: calc(2vw + 1rem);
+  margin: 0.5rem 0;
+  color: #63ecbb;
+}
+
+.projects__container .project__title:hover {
+  color: #f8bd3b;
+}
+
+@media (min-width: 40rem) {
+  .projects__container .project__title {
+    font-size: calc(1vw + 0.9rem);
+  }
+}
+
+@media (min-width: 64em) {
+  .projects__container .project__title {
+    font-size: calc(1vw + 0.6rem);
+  }
+}
+
+.projects__container .project__description {
+  font-size: 1rem;
+  word-spacing: 2px;
+}
+
+.projects__container .project__tech {
+  color: #f8bd3b;
+  display: flex;
+  font-size: 0.8rem;
+  flex-direction: row;
+  margin-top: 1.2rem;
+  letter-spacing: 0.7px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 40rem) {
+  .projects__container {
+    margin: 0.7rem auto;
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+
+@media (min-width: 64em) {
+  .projects__container {
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.connect__content {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.connect__content .title {
+  color: #f8bd3b;
+  font-size: clamp(2rem, calc(2vw + 1rem), 4rem);
+  margin-bottom: 0.5rem;
+}
+
+.connect__content a {
+  display: inline-block;
+  margin: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .connect__content {
+    width: 68%;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

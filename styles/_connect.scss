@@ -1,0 +1,24 @@
+.connect {
+  &__content {
+    margin-top: 2rem;
+    text-align: center;
+
+    .title {
+      color: $borders;
+      font-size: clamp(2rem, calc(2vw + 1rem), 4rem);
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    @include breakpoint-up(medium) {
+      width: 68%;
+      padding: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
