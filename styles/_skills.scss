@@ -1,0 +1,31 @@
+.skills {
+  &__container {
+    color: $title;
+    margin: 1rem 0;
+
+    .line-bar {
+      > svg {
+        border-radius: 2.5rem;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.2rem;
+      align-items: flex-end;
+      margin-top: 0.5rem;
+
+      > svg {
+        width: 98px;
+      }
+    }
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 0.8rem;
+    }
+  }
+}

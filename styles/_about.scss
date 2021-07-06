@@ -1,0 +1,18 @@
+.about {
+  &__current {
+    &__list {
+      margin: 1rem auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      > ul li {
+        line-height: 2;
+      }
+
+      @include breakpoint-up(medium) {
+        width: 40%;
+      }
+    }
+  }
+}

@@ -1,13 +1,11 @@
 .hero__sec {
   &__text {
-    // text-transform: capitalize;
-
     > span {
       color: $borders;
     }
 
     > h1 {
-      font-size: clamp(2rem, calc(4vw + 1rem), 4rem);
+      font-size: clamp(2.5rem, calc(4vw + 1rem), 4rem);
       font-weight: 400;
       color: $title;
       margin: 0.4rem 0rem;
@@ -18,13 +16,18 @@
       color: $subtitle;
       letter-spacing: 1px;
       text-transform: capitalize;
-      font-size: 1.5em;
+      font-size: clamp(2rem, calc(3vw + 1rem), 4rem);
+    }
+
+    > p {
+      margin: 0.7rem 0;
     }
   }
 
   &__image {
     margin-top: 2rem;
     width: 100%;
+
     img {
       width: 100%;
     }
@@ -32,6 +35,7 @@
     .image {
       margin: 2rem;
       position: relative;
+      display: none;
 
       &::after {
         content: "";
@@ -44,7 +48,26 @@
         left: 20px;
         z-index: -10;
         // background
+
+        @include breakpoint-up(medium) {
+          top: 12px;
+          left: 15px;
+        }
+      }
+
+      @include breakpoint-up(medium) {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      @include breakpoint-up(large) {
+        width: 57%;
       }
     }
+  }
+
+  @include breakpoint-up(large) {
+    display: flex;
   }
 }

@@ -15,6 +15,20 @@ body {
   }
 }
 
+main {
+  font-size: $font-regular;
+}
+
+button {
+  padding: 0.5rem 3rem;
+  font-size: inherit;
+  color: $borders;
+  background: transparent;
+  border-radius: 0.8rem;
+  border: 1px solid $borders;
+  margin-top: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -29,6 +43,49 @@ a {
 
 ul {
   list-style: none;
+}
+
+p {
+  word-spacing: 2px;
+}
+
+section {
+  margin-top: 2rem;
+
+  .header {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid $borders;
+    font-size: clamp(1.1rem, calc(1vw + 0.2rem), 2.5rem);
+
+    > h1 {
+      margin-bottom: 0.5rem;
+      color: $subtitle;
+      text-transform: capitalize;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+
+      > span {
+        color: $title;
+      }
+    }
+  }
+
+  @include breakpoint-up(medium) {
+    margin: 0;
+    padding: 3rem;
+
+    .content__container {
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpoint-up(large) {
+    padding: 5rem;
+
+    .content__container {
+      width: 65%;
+    }
+  }
 }
 
 .no-scroll {

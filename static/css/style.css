@@ -5,7 +5,7 @@
 }
 
 body {
-  color: #d3fbd8ec;
+  color: #d3fbd8;
   background-color: #171a21;
   font-family: "Lora", serif;
   padding: 1.5rem;
@@ -15,6 +15,20 @@ body {
   body {
     padding: 2rem;
   }
+}
+
+main {
+  font-size: 20px;
+}
+
+button {
+  padding: 0.5rem 3rem;
+  font-size: inherit;
+  color: #f8bd3b;
+  background: transparent;
+  border-radius: 0.8rem;
+  border: 1px solid #f8bd3b;
+  margin-top: 1rem;
 }
 
 h1,
@@ -31,6 +45,51 @@ a {
 
 ul {
   list-style: none;
+}
+
+p {
+  word-spacing: 2px;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+section .header {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f8bd3b;
+  font-size: clamp(1.1rem, calc(1vw + 0.2rem), 2.5rem);
+}
+
+section .header > h1 {
+  margin-bottom: 0.5rem;
+  color: #f4f9ff;
+  text-transform: capitalize;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+section .header > h1 > span {
+  color: #63ecbb;
+}
+
+@media (min-width: 40rem) {
+  section {
+    margin: 0;
+    padding: 3rem;
+  }
+  section .content__container {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 64em) {
+  section {
+    padding: 5rem;
+  }
+  section .content__container {
+    width: 65%;
+  }
 }
 
 .no-scroll {
@@ -103,16 +162,6 @@ ul {
   text-align: center;
   font-size: 1.2rem;
   padding-top: 4rem;
-}
-
-.header .overlay-div ul button {
-  padding: 0.5rem 3rem;
-  font-size: inherit;
-  color: #f8bd3b;
-  background: transparent;
-  border-radius: 2.5rem;
-  border: 1px solid #f8bd3b;
-  margin-top: 1rem;
 }
 
 .header .overlay-div ul li {
@@ -241,7 +290,7 @@ ul {
 }
 
 .hero__sec__text > h1 {
-  font-size: clamp(2rem, calc(4vw + 1rem), 4rem);
+  font-size: clamp(2.5rem, calc(4vw + 1rem), 4rem);
   font-weight: 400;
   color: #63ecbb;
   margin: 0.4rem 0rem;
@@ -252,7 +301,11 @@ ul {
   color: #f4f9ff;
   letter-spacing: 1px;
   text-transform: capitalize;
-  font-size: 1.5em;
+  font-size: clamp(2rem, calc(3vw + 1rem), 4rem);
+}
+
+.hero__sec__text > p {
+  margin: 0.7rem 0;
 }
 
 .hero__sec__image {
@@ -267,6 +320,7 @@ ul {
 .hero__sec__image .image {
   margin: 2rem;
   position: relative;
+  display: none;
 }
 
 .hero__sec__image .image::after {
@@ -279,5 +333,79 @@ ul {
   top: 20px;
   left: 20px;
   z-index: -10;
+}
+
+@media (min-width: 40rem) {
+  .hero__sec__image .image::after {
+    top: 12px;
+    left: 15px;
+  }
+}
+
+@media (min-width: 40rem) {
+  .hero__sec__image .image {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__sec__image .image {
+    width: 57%;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__sec {
+    display: flex;
+  }
+}
+
+.about__current__list {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about__current__list > ul li {
+  line-height: 2;
+}
+
+@media (min-width: 40rem) {
+  .about__current__list {
+    width: 40%;
+  }
+}
+
+.skills__container {
+  color: #63ecbb;
+  margin: 1rem 0;
+}
+
+.skills__container .line-bar > svg {
+  border-radius: 2.5rem;
+}
+
+.skills__container .content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+  align-items: flex-end;
+  margin-top: 0.5rem;
+}
+
+.skills__container .content > svg {
+  width: 98px;
+}
+
+@media (min-width: 40rem) {
+  .skills__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.8rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
