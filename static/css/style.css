@@ -168,6 +168,10 @@ section .header > h1 {
   }
 }
 
+.highlight {
+  color: #f8bd3b !important;
+}
+
 .header .overlay-div {
   position: absolute;
   top: 0;
@@ -324,7 +328,7 @@ section .header > h1 {
 }
 
 .hero__sec__text > h1 {
-  font-size: clamp(2.5rem, calc(4vw + 1rem), 4rem);
+  font-size: clamp(2.5rem, calc(4vw + 1rem), 3rem);
   font-weight: 400;
   color: #63ecbb;
   margin: 0.4rem 0rem;
@@ -332,10 +336,9 @@ section .header > h1 {
 
 .hero__sec__text > h3 {
   margin: 0.4rem 0;
-  color: #f4f9ff;
   letter-spacing: 1px;
   text-transform: capitalize;
-  font-size: clamp(2rem, calc(3vw + 1rem), 4rem);
+  font-size: clamp(2rem, calc(1vw + 1rem), 4rem);
 }
 
 .hero__sec__text > p {
@@ -438,26 +441,9 @@ section .header > h1 {
   margin-top: 1rem;
 }
 
-@media (min-width: 40rem) {
-  .skills__container .express {
-    margin: auto 0 0 0;
-  }
-}
-
-.skills__container .line-bar > svg {
-  border-radius: 2.5rem;
-}
-
-.skills__container .content {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.2rem;
-  align-items: flex-end;
-  font-size: 1.5rem;
-}
-
-.skills__container .content > svg {
-  width: 98px;
+.skills__container ul > li {
+  color: #f4f9ff;
+  line-height: 1.7rem;
 }
 
 @media (min-width: 40rem) {
@@ -467,6 +453,7 @@ section .header > h1 {
     justify-content: space-around;
     gap: 0.8rem;
     width: 80%;
+    margin: 0 auto;
   }
 }
 

@@ -5,7 +5,7 @@
     }
 
     > h1 {
-      font-size: clamp(2.5rem, calc(4vw + 1rem), 4rem);
+      font-size: clamp(2.5rem, calc(4vw + 1rem), 3rem);
       font-weight: 400;
       color: $title;
       margin: 0.4rem 0rem;
@@ -13,10 +13,9 @@
 
     > h3 {
       margin: 0.4rem 0;
-      color: $subtitle;
       letter-spacing: 1px;
       text-transform: capitalize;
-      font-size: clamp(2rem, calc(3vw + 1rem), 4rem);
+      font-size: clamp(2rem, calc(1vw + 1rem), 4rem);
     }
 
     > p {
