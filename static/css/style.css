@@ -441,6 +441,10 @@ section .header > h1 {
   margin-top: 1rem;
 }
 
+.skills__container > div > div {
+  display: inline-block;
+}
+
 .skills__container ul > li {
   color: #f4f9ff;
   line-height: 1.7rem;
