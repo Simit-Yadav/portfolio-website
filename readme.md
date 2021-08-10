@@ -1,6 +1,5 @@
-## Style Guide
+### Personal Site
 
---parallax background
---light color theme.
---instead of static.
---Technology - HTML, CSS, JS, SCSS, chart.js, typed.js., particles.js.
+Here is my info and projects i made.
+
+### Link to final product: https://simityadav-simit-yadav.vercel.app/
