@@ -346,6 +346,7 @@ section .header > h1 {
 }
 
 .hero__sec__image {
+	display: none !important;
   margin-top: 2rem;
   width: 100%;
 }
